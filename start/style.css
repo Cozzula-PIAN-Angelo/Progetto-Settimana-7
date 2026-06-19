@@ -1,0 +1,201 @@
+/* SportsHub — Week Project Settimana VII
+   Reset minimale + tipografia di base. Aggiungi qui le tue regole. */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1a1a1a;
+  background: #f4f6fa;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.site-header {
+  background-color: hsl(220, 60%, 25%);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.search-bar {
+  display: flex;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.search-bar input {
+  border: none;
+  border-radius: 5px 0 0 5px;
+  flex: 1;
+  padding: 10px 14px;
+}
+
+form button {
+  color: hsl(220, 60%, 25%);
+  border-radius: 0 5px 5px 0;
+  border: none;
+  padding: 10px 14px;
+}
+/* Aggiungi qui le tue regole per: form, risultati, card squadra, eventi. */
+
+.card-squadra {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-squadra:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-squadra img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.card-squadra h3 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.card-squadra p {
+  margin: 0;
+  color: #666;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+
+.btn-preferiti {
+  margin-top: 14px;
+  width: 100%;
+  padding: 8px;
+  background: #e8f0fe;
+  color: hsl(220, 60%, 25%);
+  border: 1px solid #c5d5f5;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+
+.btn-preferiti:hover {
+  background: #c5d5f5;
+}
+
+.btn-preferiti:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.btn-rimuovi {
+  margin-top: 14px;
+  width: 100%;
+  padding: 8px;
+  background: #ffe5e5;
+  color: #c0392b;
+  border: 1px solid #f5c6c6;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+
+.btn-rimuovi:hover {
+  background: #f5c6c6;
+}
+
+.griglia-squadre {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+@media (min-width: 576px) {
+  .griglia-squadre {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .griglia-squadre .card-squadra:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 768px) {
+  .griglia-squadre {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .griglia-squadre .card-squadra:last-child:nth-child(odd) {
+    grid-column: auto;
+  }
+}
+
+#dettagli-section {
+  margin-top: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+}
+
+#dettagli-section h2 {
+  color: hsl(220, 60%, 35%);
+  margin-top: 0;
+}
+
+.dettagli-colonne {
+  display: flex;
+  gap: 40px;
+}
+
+.dettagli-colonna {
+  flex: 1;
+}
+
+.dettagli-colonna h3 {
+  border-bottom: 2px solid hsl(220, 60%, 25%);
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+
+#dettagli-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#dettagli-section li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 576px) {
+  .dettagli-colonne {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SportsHub — Eventi sportivi</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div>
+        <h1>SportsHub</h1>
+        <p>Cerca una squadra, scopri prossime partite e ultimi risultati</p>
+      </div>
+      <form class="search-bar" id="search-bar">
+        <input type="text" id="input-ricerca" placeholder="Cerca squadre..." />
+        <button type="submit">Cerca</button>
+      </form>
+      <!-- Titolo dell'app + form di ricerca -->
+    </header>
+
+    <main class="container">
+      <h2>⭐ Le tue squadre preferite</h2>
+      <section id="preferiti-section"></section>
+      <section id="risultati-section"></section>
+      <section id="dettagli-section" hidden></section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
